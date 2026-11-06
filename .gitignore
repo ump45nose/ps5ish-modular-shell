@@ -1,3 +1,4 @@
 artifacts/
 *.user
 references/
+__pycache__/
