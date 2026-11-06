@@ -1,0 +1,17 @@
+﻿{
+  "id": "preview.local-video",
+  "schema": 2,
+  "hostContract": 1,
+  "entry": "LocalVideo.dll",
+  "type": "LocalVideo.Module",
+  "enabled": true,
+  "version": "0.7.0",
+  "capabilities": [
+    "video", "playback"
+  ],
+  "dependencies": []
+}
+
+
+
+

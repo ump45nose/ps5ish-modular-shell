@@ -1,0 +1,25 @@
+{
+  "tools": [
+    {
+      "sha256": "AD8F211BC894755E0061C55AB280AE00E8D3D4F15A8CC4372B24CFA247B5942E",
+      "localSource": "C:\\Users\\17290\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-8.1.2-full_build\\bin\\ffmpeg.exe",
+      "name": "ffmpeg.exe"
+    },
+    {
+      "sha256": "9DF3B0B5275E830961DF6D94E1F7A71121A7ABD5FF708E9FEC8A0B6084A55015",
+      "localSource": "C:\\Users\\17290\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-8.1.2-full_build\\bin\\ffprobe.exe",
+      "name": "ffprobe.exe"
+    },
+    {
+      "sha256": "9A4EB5F1C29C6A2E93852EAD46B999E284A6A5CA8BAB4D4E241D587D025A52DE",
+      "localSource": "C:\\Program Files\\nodejs\\node.exe",
+      "name": "node.exe"
+    },
+    {
+      "sha256": "66674953fe251b89f4d08c5f0e35e0728679bd67ab3d7d05c0562af101dd3e7a",
+      "url": "https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.exe",
+      "name": "yt-dlp.exe"
+    }
+  ],
+  "schema": 1
+}

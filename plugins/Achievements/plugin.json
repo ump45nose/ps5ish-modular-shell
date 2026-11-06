@@ -1,0 +1,1 @@
+{"schema":2,"hostContract":1,"id":"feature.achievements","version":"0.8.0","entry":"Achievements.dll","type":"AchievementAdapter.Module","enabled":true,"capabilities":["contextView","contextSummary"],"dependencies":[]}

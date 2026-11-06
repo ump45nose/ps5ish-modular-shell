@@ -1,0 +1,26 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <!-- 不声明 PA CLR 类型；PA 缺失时该文件不参与基础主题装载。 -->
+  <LinearGradientBrush x:Key="Ps5TrophySilver" StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#697884" Offset="0"/><GradientStop Color="#C7D3DF" Offset=".25"/><GradientStop Color="#FFFFFF" Offset=".43"/><GradientStop Color="#82929F" Offset=".68"/><GradientStop Color="#D6E5EE" Offset="1"/></LinearGradientBrush>
+  <LinearGradientBrush x:Key="Ps5TrophyGold" StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#715427" Offset="0"/><GradientStop Color="#E2B654" Offset=".25"/><GradientStop Color="#FFF4CB" Offset=".43"/><GradientStop Color="#987539" Offset=".68"/><GradientStop Color="#F4D489" Offset="1"/></LinearGradientBrush>
+  <LinearGradientBrush x:Key="Ps5TrophyBronze" StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#603C28" Offset="0"/><GradientStop Color="#B87749" Offset=".25"/><GradientStop Color="#F5D2AF" Offset=".43"/><GradientStop Color="#855532" Offset=".68"/><GradientStop Color="#D4A376" Offset="1"/></LinearGradientBrush>
+  <LinearGradientBrush x:Key="Ps5TrophyPlatinum" StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#496D88" Offset="0"/><GradientStop Color="#97DBF8" Offset=".25"/><GradientStop Color="#FFFFFF" Offset=".43"/><GradientStop Color="#729BB2" Offset=".68"/><GradientStop Color="#C2F2FF" Offset="1"/></LinearGradientBrush>
+  <DataTemplate x:Key="PlayAch.Template.AchievementToast">
+    <Border x:Name="Toast" Width="480" MinHeight="92" Padding="18,14" CornerRadius="6" BorderThickness="1" BorderBrush="#638F9AA8" Tag="{DynamicResource Ps5ReducedMotion}">
+      <Border.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#EF26323D" Offset="0"/><GradientStop Color="#DF101720" Offset="1"/></LinearGradientBrush></Border.Background>
+      <Grid>
+        <Grid.ColumnDefinitions><ColumnDefinition Width="62"/><ColumnDefinition Width="*"/><ColumnDefinition Width="42"/></Grid.ColumnDefinitions>
+        <Image Source="{Binding IconPath}" Width="52" Height="52" Stretch="Uniform"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="12,0,14,0"><TextBlock Text="获得奖杯！" FontSize="13" Foreground="#CFDBE6"/><TextBlock Text="{Binding TitleText}" FontSize="19" Foreground="White" Margin="0,5,0,0" TextTrimming="CharacterEllipsis"/><TextBlock Text="{Binding GameName}" FontSize="11" Foreground="#8F9DAA" Margin="0,4,0,0" TextTrimming="CharacterEllipsis"/></StackPanel>
+        <Path x:Name="Trophy" Grid.Column="2" Width="30" Height="36" Stretch="Uniform" Fill="{StaticResource Ps5TrophySilver}" Data="M8,2 L24,2 23,14 Q22,20 17,22 L17,28 23,30 23,33 9,33 9,30 15,28 15,22 Q10,20 9,14 Z M8,5 L2,5 2,10 Q2,17 10,18 L9,14 Q5,14 5,10 L5,8 8,8 Z M24,5 L30,5 30,10 Q30,17 22,18 L23,14 Q27,14 27,10 L27,8 24,8 Z"/>
+      </Grid>
+    </Border>
+    <DataTemplate.Triggers>
+      <DataTrigger Binding="{Binding TrophyType}" Value="gold"><Setter TargetName="Trophy" Property="Fill" Value="{StaticResource Ps5TrophyGold}"/></DataTrigger>
+      <DataTrigger Binding="{Binding TrophyType}" Value="bronze"><Setter TargetName="Trophy" Property="Fill" Value="{StaticResource Ps5TrophyBronze}"/></DataTrigger>
+      <DataTrigger Binding="{Binding TrophyType}" Value="platinum"><Setter TargetName="Trophy" Property="Fill" Value="{StaticResource Ps5TrophyPlatinum}"/></DataTrigger>
+      <DataTrigger Binding="{Binding IsCapstone}" Value="True"><Setter TargetName="Trophy" Property="Fill" Value="{StaticResource Ps5TrophyPlatinum}"/></DataTrigger>
+      <DataTrigger Binding="{Binding IsGameCompleted}" Value="True"><Setter TargetName="Trophy" Property="Fill" Value="{StaticResource Ps5TrophyPlatinum}"/></DataTrigger>
+      <Trigger SourceName="Toast" Property="Tag"><Trigger.Value><sys:Boolean>False</sys:Boolean></Trigger.Value><Trigger.EnterActions><BeginStoryboard x:Name="Arrival"><Storyboard><DoubleAnimation Storyboard.TargetName="Toast" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.25"/><DoubleAnimation Storyboard.TargetName="Trophy" Storyboard.TargetProperty="Opacity" From=".4" To="1" Duration="0:0:0.6" AutoReverse="True" RepeatBehavior="2x"/></Storyboard></BeginStoryboard></Trigger.EnterActions><Trigger.ExitActions><RemoveStoryboard BeginStoryboardName="Arrival"/></Trigger.ExitActions></Trigger>
+    </DataTemplate.Triggers>
+  </DataTemplate>
+</ResourceDictionary>

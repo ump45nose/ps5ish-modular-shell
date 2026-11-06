@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "items": [{
+    "provider": "playnite",
+    "sourceInstance": "local",
+    "itemId": "替换为 Playnite 游戏 GUID，不是 Steam App ID",
+    "music": "D:\\GameMedia\\example\\music.wav",
+    "volume": 0.35,
+    "video": "D:\\GameMedia\\example\\trailer.mp4",
+    "videoVolume": 0.5,
+    "trailerAudio": false
+  }]
+}

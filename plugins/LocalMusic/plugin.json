@@ -1,0 +1,17 @@
+{
+  "id": "preview.local-music",
+  "schema": 2,
+  "hostContract": 1,
+  "entry": "LocalMusic.dll",
+  "type": "LocalMusic.Module",
+  "enabled": true,
+  "version": "0.6.0",
+  "capabilities": [
+    "music"
+  ],
+  "dependencies": []
+}
+
+
+
+

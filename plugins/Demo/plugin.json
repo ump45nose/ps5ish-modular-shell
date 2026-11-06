@@ -1,0 +1,15 @@
+{
+  "id": "demo.home",
+  "schema": 2,
+  "hostContract": 1,
+  "entry": "Demo.dll",
+  "type": "Demo.Module",
+  "enabled": true,
+  "version": "0.6.0",
+  "capabilities": [],
+  "dependencies": []
+}
+
+
+
+
